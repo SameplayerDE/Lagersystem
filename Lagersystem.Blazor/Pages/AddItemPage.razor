@@ -1,0 +1,17 @@
+﻿@page "/additem"
+
+<h3>AddItemPage</h3>
+<div class="columns">
+    <div class="column">
+        <input class="column input" type="text" placeholder="Bezeichung" @bind="_descriptor" />
+        <input class="column button is-primary" type="button" onclick="@Submit" value="Submit" />
+    </div>
+</div>
+
+@code {
+    private string _descriptor = string.Empty;
+
+    private void Submit() {
+        Console.WriteLine(_descriptor);
+    }
+}
